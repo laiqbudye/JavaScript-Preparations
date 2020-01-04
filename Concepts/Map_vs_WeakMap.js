@@ -3,6 +3,8 @@
 // Maps are used to store data in the form of key value pairs. They are same as objects with difference as below:-
 // We can give object as key to another object.
 
+// Normal Object
+
 var x = {};
 var y = {};
 var z = {};
