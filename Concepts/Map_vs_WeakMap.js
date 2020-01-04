@@ -24,8 +24,8 @@ var map = new Map();
 map.set(y, 'laiq');
 map.set(z, 'budye');     // here map will store both the keys 
 console.log(map);        // [[Entries]]
-                            0: {Object => "laiq"}
-                            1: {Object => "budye"}
+                         //  0: {Object => "laiq"}
+                         //  1: {Object => "budye"}
                             
 // Then what is WeakMap
 
