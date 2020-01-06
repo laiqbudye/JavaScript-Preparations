@@ -9,18 +9,60 @@
 
 conosle.log(globalThis);    //Window {parent: Window, opener: null, top: Window, length: 1, frames: Window, …}
 
+/*------------------------------------------------------------------------------------------*/
+
 //2. Promise.allSettled()
 
+//The Promise.allSettled() method returns a promise that resolves after all of the given promises have either resolved or rejected,
+//with an array of objects that each describes the outcome of each promise.
+
+
+var p1 = new Promise((resolve, reject) => setTimeout(resolve, 100));
+var p2 = new Promise((resolve, reject) => setTimeout(reject, 100));
+var p3 = new Promise((resolve, reject) => setTimeout(resolve, 100));
+
+Promise.allSettled([p1,p2,p3]).then(results => 
+                        results.forEach(result => console.log(result))
+                        );
+
+/*---------------------------------------------------------------------------------------*/
 
 //3. Nullish CoalSecing Operator
 
+// this feature comes into picture to overcome drawbacks with OR(||) operator.
 
+let x = {
+    name : "",
+    age : 0
+}
+
+console.log(x.name || "Laiq");  // Laiq // ES5
+console.log(x.age || 23);       // 23
+
+console.log(x.name ?? "Laiq");  // ""     //ES2020
+console.log(x.age ?? 23);       //0       // ES2020
+
+
+/*--------------------------------------------------------------------------------------*/
+            
 //4. Optional chaning operator 
 
+// this is best feature when we have to check any method or variable inside two or three nested objects
 
+let x = {
+    y : {
+        z : {
+            name : "Laiq"
+        }
+    }
+}
+
+console.log(x && x.y && x.y.z && x.y.z.name);  // ES5
+
+console.log(x.y?.z?.name);   // ES2020
+
+/*------------------------------------------------------------------------------------*/
 //5. BigInt
-
-//BigInt
 
 var a = Number.MAX_SAFE_INTEGER;
 console.log(a);     // 9007199254740991
@@ -33,3 +75,5 @@ var b = BigInt(9007199254740991);  // 9007199254740991n  //ES2020
 // and if we add something to b then it will give correct results as it is BigInt value.
 
 console.log( b + 5n); //9007199254740996n
+            
+/*-----------------------------------------------------------------------------------------*/
