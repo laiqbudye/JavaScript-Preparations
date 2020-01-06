@@ -19,3 +19,17 @@ conosle.log(globalThis);    //Window {parent: Window, opener: null, top: Window
 
 
 //5. BigInt
+
+//BigInt
+
+var a = Number.MAX_SAFE_INTEGER;
+console.log(a);     // 9007199254740991
+
+// here a is max safe integer value in js. if we plan to add 1 or 2 to a then it will give some unexpected results.
+// sometimes it will give correct value and sometimes not. so to overcome this problem BigInt comes in picture.
+
+var b = BigInt(9007199254740991);  // 9007199254740991n  //ES2020
+
+// and if we add something to b then it will give correct results as it is BigInt value.
+
+console.log( b + 5n); //9007199254740996n
