@@ -30,6 +30,8 @@ let [...b] = numArray;  // b: 10,20,30
 
 let [a,...b] = numArray;   //a:10, b:20,30
 
+//for more info:- https://dev.to/sarah_chima/destructuring-assignment---arrays-16f
+
 
 //3. Destructring of Objects
 
