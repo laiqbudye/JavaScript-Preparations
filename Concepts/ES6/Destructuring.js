@@ -29,3 +29,21 @@ let [a,b,c,d] = numArray; // a: 10 b: 20 c: 30 d: undefined
 let [...b] = numArray;  // b: 10,20,30
 
 let [a,...b] = numArray;   //a:10, b:20,30
+
+
+//3. Destructring of Objects
+
+// Uses of Destructuring in objects
+
+let personObject = { name: 'Laiq', lastname: 'Budye', address: 'Pune' };
+
+let {name, lastname} = personObject;    // you have to give property name in let{}.  here {} is not define object it's desturcturing syntax
+
+console.log('Name: ' + name + ' LastName: ' + lastname);    //Name: Laiq  Lastname: Budye
+
+// below is the tricky thing that you can not skip and expect to work it like array
+
+let [name, , lastname] = personObject;  // this will throw an error here, Syntax error: Unexpected token
+
+
+//for more info:- https://wesbos.com/destructuring-objects/
