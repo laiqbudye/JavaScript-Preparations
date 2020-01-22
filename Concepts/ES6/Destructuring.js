@@ -43,7 +43,7 @@ console.log('Name: ' + name + ' LastName: ' + lastname);    //Name: Laiq  Lastna
 
 // below is the tricky thing that you can not skip and expect to work it like array
 
-let [name, , lastname] = personObject;  // this will throw an error here, Syntax error: Unexpected token
+let {name, , lastname} = personObject;  // this will throw an error here, Syntax error: Unexpected token
 
 
 //for more info:- https://wesbos.com/destructuring-objects/
