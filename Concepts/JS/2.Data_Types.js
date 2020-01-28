@@ -1,7 +1,7 @@
 
 //JavaScript provides different data types to hold different types of values. There are two types of data types in JavaScript.
 
-//1. Primitive data type
+//1. Primitive data type   - data type can store only single value at a time.
 //2. Non-primitive (reference) data type
 
 //1.Primitive Data Types
@@ -93,3 +93,13 @@ var b = BigInt(9007199254740991);  // 9007199254740991n  //ES2020
 // and if we add something to b then it will give correct results as it is BigInt value.
 
 console.log( b + 5n); //9007199254740996n
+
+  ************************************************************************************************************************************
+
+    7. Symbol
+    
+  ************************************************************************************************************************************
+
+      //NON PRIMITIVE DATA TYPES
+      
+      1.Object
