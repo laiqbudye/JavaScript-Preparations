@@ -64,3 +64,21 @@ alert("some code");
 
   //3.const
   const c = 30;   // same as let, it also has block scope but we cant reassign value to const.
+
+// but we can add or delete values (push/pop) from const.
+
+const a= {
+    b: '10'
+}
+
+a.c = '20';   //-------------> {b:'10',c:'20'}
+
+delete a.c;   //-------------> {b:'10'}
+
+//same will apply for arrays also
+
+const b = [10,20,30];
+
+b.push(40);   // 10,20,30,40
+
+b.pop();    //10,20,30
