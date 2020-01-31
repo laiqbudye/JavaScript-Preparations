@@ -31,6 +31,11 @@
     // embed an expression
     alert( `the result is ${1 + 2}` ); // the result is 3
   
+
+let name = "Ilya";
+alert( `hello ${1}` ); // ?    hello 1
+alert( `hello ${"name"}` ); // ? hello name
+alert( `hello ${name}` ); // ? hello Ilya
   ************************************************************************************************************************************
   
   2.Number
@@ -103,3 +108,4 @@ console.log( b + 5n); //9007199254740996n
       //NON PRIMITIVE DATA TYPES
       
       1.Object
+      // I will make other file to cover objects as this is a very important topic in JS
