@@ -36,3 +36,14 @@ printName("Laiq");
 
 let abc = () => console.log("This is without arguments");
 abc();
+
+
+//For instance, to dynamically create a function:
+
+let age = prompt("What is your age?", 18);
+
+let welcome = (age < 18) ?
+  () => alert('Hello') :
+  () => alert("Greetings!");
+
+welcome(); // Greetings!
