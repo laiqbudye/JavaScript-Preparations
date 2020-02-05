@@ -31,3 +31,16 @@ x();  // now function is inside of X. if we execute x then it will run the funct
 
 //Similar to the var statement, function declarations are hoisted to the top of other code. 
 //Function expressions aren’t hoisted, which allows them to retain a copy of the local variables from the scope where they were defined.
+
+
+
+// WE can copy one function to another function also.
+
+function sayHi() {   // (1) create
+  alert( "Hello" );
+}
+
+let func = sayHi;    // (2) copy
+
+func(); // Hello     // (3) run the copy (it works)!
+sayHi(); // Hello    //     this still works too 
