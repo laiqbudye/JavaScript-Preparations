@@ -49,6 +49,16 @@ alert("some code");
 //for more visit:- https://stackoverflow.com/questions/1335851/what-does-use-strict-do-in-javascript-and-what-is-the-reasoning-behind-it
 
   **********************************************************************************************
+  
+  ###Execution Context
+
+// whenever browser runs any JS code, it first create xecution context in which our code gets run.
+// in the execution context it creates two things
+//1. global Object (window object)
+//2. this 
+  
+  
+  ***********************************************************************************************
 // VARIABLE
   
 // variable is a container in which we can store data and can use it later as per our need.
