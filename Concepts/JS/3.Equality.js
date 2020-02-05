@@ -46,3 +46,9 @@ alert( null >= 0 ); // (3) true
 
 // On the other hand, the equality check == for undefined and null is defined such that, without any conversions, 
 //they equal each other and don’t equal anything else. That’s why (2) null == 0 is false.
+
+
+//The value undefined shouldn’t be compared to other values:
+alert( undefined > 0 ); // false (1)
+alert( undefined < 0 ); // false (2)
+alert( undefined == 0 ); // false (3)
