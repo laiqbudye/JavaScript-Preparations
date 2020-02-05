@@ -22,3 +22,17 @@ let sum = function(a, b) {
 
 
 alert( sum(1, 2) ); // 3
+
+
+
+// if we are passing only one argument to function then we can omit brackets around arguments. e.g
+
+let printName = name => console.log(name);
+
+printName("Laiq");
+
+
+//if we are not passing any argument to the function then also we have to write paranthesis. we cant omit them in that case.
+
+let abc = () => console.log("This is without arguments");
+abc();
