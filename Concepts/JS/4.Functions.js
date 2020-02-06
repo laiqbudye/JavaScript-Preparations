@@ -44,3 +44,29 @@ let func = sayHi;    // (2) copy
 
 func(); // Hello     // (3) run the copy (it works)!
 sayHi(); // Hello    //     this still works too 
+
+
+
+### ARGUMENTS keyword
+
+// with each execution context we get two things.
+//1. this 
+//2. arguments
+
+// arguments is an object which holds the values that we pass to the function.
+
+function add(a,b){
+  console.log(arguments);    // Arguments{0: 5, 1: 6}
+  console.log(Array.from(arguments));   // [5, 6]...... convert an object to array
+  console.log(arguments[0]);    //5
+  console.log(arguments[1]);    //6
+}
+
+add(5,6);
+
+// if we dont pass any arguments to the function then arguments will return an empty object.
+
+function print(){
+  console.log(arguments);   //  {}
+}
+
