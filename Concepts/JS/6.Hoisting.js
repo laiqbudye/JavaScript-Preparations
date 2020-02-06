@@ -38,7 +38,7 @@ function add(){
 //  phase.
   
   
- //for more info visit: https://blog.bitsrc.io/hoisting-in-modern-javascript-let-const-and-var-b290405adfda
+
   
   
   //Examples of hoisting
@@ -91,3 +91,6 @@ var helloWorld = function(){
 }
 helloWorld();
   
+
+ 
+//for more info visit: https://blog.bitsrc.io/hoisting-in-modern-javascript-let-const-and-var-b290405adfda
