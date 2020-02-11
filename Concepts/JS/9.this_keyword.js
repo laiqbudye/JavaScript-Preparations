@@ -30,3 +30,22 @@ obj.print();    // laiq,    obj{}
 obj1.print();         // this refers to obj1
 animal.eat();           // this refers to animal
 obj1.obj2.print();          // this refers to obj2
+
+
+
+// e.g
+
+const a = function(){
+  console.log(this);
+  const b = function(){
+  console.log(this);
+  }
+  const c = {
+  hi: function(){
+  console.log(this);
+  }
+ }
+  c.hi();         // c { hi: fun......}
+}b();         // window obj
+}
+a();    // window obj
