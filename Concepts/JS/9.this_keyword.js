@@ -49,3 +49,71 @@ const a = function(){
 }b();         // window obj
 }
 a();    // window obj
+
+
+
+// imp note:- THIS KEYWORD IS NOT LEXICALLY SCOPED i.e IT DOES NOT MATTER WHERE IT IS WRITTEN, IT MATTERS HOW THE FUNCTION IS CALLED/INVOKED
+// see example below:-
+
+const obj = {
+name: "Billy",
+sing(){
+console.log(this);        //obj{}
+var anotherfunction = function(){
+console.log(this);        //window
+}
+anotherfunction();
+} 
+}
+obj.sing();
+
+// we can solve above problem by one of the ways from below:
+
+// 1. var that = this
+
+const obj = {
+name: "Billy",
+sing(){
+console.log(this);        //obj{}
+ var that = this;
+var anotherfunction = function(){
+console.log(that);        //obj{}
+}
+anotherfunction();
+} 
+}
+obj.sing();
+
+
+// 2. bind method
+
+const obj = {
+name: "Billy",
+sing(){
+console.log(this);        //obj{}
+var anotherfunction = function(){
+console.log(this);        //obj{}
+}
+return anotherfunction.bind(this);   // here this refers to obj, so inside anoterfunction it will refer to obj only
+} 
+}
+obj.sing();
+
+
+// 3. Arrow function
+
+// Arrow functions are lexically scoped, i.e they refer to the object in which they are written instead of how they get called.
+const obj = {
+name: "Billy",
+sing(){
+console.log(this);        //obj{}
+var anotherfunction = () => {
+console.log(this);        //obj{}
+}
+anotherfunction();
+} 
+}
+obj.sing();
+
+
+
