@@ -67,7 +67,16 @@ var logPokemon = pokemonName.bind(pokemon); // creates new object and binds poke
 
 logPokemon('sushi', 'algorithms'); // Pika Chu  loves sushi and algorithms
 
-
+---------------------------------------------------------------------------------------------------
+//     e.g
+    
+    function multiply(a,b){
+        return a*b;
+    }
+    
+    let multiplyByTwo = multiply.bind(this,2);          //function currying
+    
+    multiplyByTwo(4);       ///8
 
 
 // for more info visit:- https://medium.com/@omergoldberg/javascript-call-apply-and-bind-e5c27301f7bb
