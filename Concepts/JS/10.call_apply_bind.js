@@ -44,3 +44,30 @@ var pokemonName = function(snack, hobby) {
 
 pokemonName.call(pokemon,'sushi', 'algorithms'); // Pika Chu  loves sushi and algorithms
 pokemonName.apply(pokemon,['sushi', 'algorithms']); // Pika Chu  loves sushi and algorithms
+
+
+//2.Bind
+
+// bind does not execute function right away, instead it returns new function with specified this scope which we can use later.
+
+var pokemon = {
+    firstname: 'Pika',
+    lastname: 'Chu ',
+    getPokeName: function() {
+        var fullname = this.firstname + ' ' + this.lastname;
+        return fullname;
+    }
+};
+
+var pokemonName = function(snack, hobby) {
+    console.log(this.getPokeName() + ' loves ' + snack + ' and ' + hobby);
+};
+
+var logPokemon = pokemonName.bind(pokemon); // creates new object and binds pokemon. 'this' of pokemon === pokemon now
+
+logPokemon('sushi', 'algorithms'); // Pika Chu  loves sushi and algorithms
+
+
+
+
+// for more info visit:- https://medium.com/@omergoldberg/javascript-call-apply-and-bind-e5c27301f7bb
