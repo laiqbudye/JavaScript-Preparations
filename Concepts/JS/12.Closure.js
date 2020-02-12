@@ -30,3 +30,60 @@ a()()();
 // this is possible because of closure.
 // when function a gets pop off from stack garbage collector will look for var name, and it looks that somethig is referencing that variable,
 // so it will leave that variable as it is and move it to the closure. in this way closure works internally.
+
+
+
+
+-------------------------------Interview Questions on Closure--------------------------------
+
+const array = [1,2,3,4];
+
+for (var i = 0; i< array.length; i++){
+    setTimeout(function(){
+        console.log("I am at index: "+i);
+    },2000);
+}
+
+//o/p--->
+I am at index: 4
+I am at index: 4
+I am at index: 4
+I am at index: 4
+
+
+// we can solve above problem by using one of the below approach:
+
+
+//ES6 approach
+const array = [1,2,3,4];
+
+for (let i = 0; i< array.length; i++){
+    setTimeout(function(){
+        console.log("I am at index: "+i);
+    },2000);
+}
+
+//o/p--->
+I am at index: 0
+I am at index: 1
+I am at index: 2
+I am at index: 3
+
+
+// ES5 Approach
+
+const array = [1,2,3,4];
+
+for (var i = 0; i< array.length; i++){
+    (function(i){
+        setTimeout(function(){
+        console.log("I am at index: "+i);
+    },2000);
+    })(i)   
+}
+
+//o/p--->
+I am at index: 0
+I am at index: 1
+I am at index: 2
+I am at index: 3
