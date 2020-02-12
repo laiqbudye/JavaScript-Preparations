@@ -61,3 +61,8 @@ x()();      //I am Y
 
 
 //because of all this functions are FIRST CLASS CITIZENS in JS.
+
+
+//HOF - HIGHER ORDER FUCTIONS
+
+// hof is a function which takes other function as a parameter or return function as its o/p.
