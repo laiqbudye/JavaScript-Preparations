@@ -82,6 +82,19 @@ for (var i = 0; i< array.length; i++){
     })(i)   
 }
 
+//option 
+
+const array = [1,2,3,4];
+
+for (let i = 0; i< array.length; i++){
+    function c(i){
+        setTimeout(function(){
+        console.log("I am at index: "+i);
+    },2000);
+    }
+    c(i);   
+}
+
 //o/p--->
 I am at index: 0
 I am at index: 1
