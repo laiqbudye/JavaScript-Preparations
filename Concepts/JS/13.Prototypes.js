@@ -59,3 +59,33 @@ arr.__proto__.__proto__.__proto__    // null, whenenver we cross base object in 
 
 arr.__proto__ === Array.prototype   // true
 
+***********************************************************************************************************************************
+  
+  
+//   for…in loop
+// The for..in loop iterates over inherited properties too.
+
+// For instance: 
+
+let animal = {
+  eats: true
+};
+
+let rabbit = {
+  jumps: true,
+  __proto__: animal         //never assign values like this, it causes performance issues
+};
+
+// Object.keys only returns own keys
+alert(Object.keys(rabbit)); // jumps
+
+// for..in loops over both own and inherited keys
+for(let prop in rabbit) alert(prop); // jumps, then eats
+
+// .. to fix above problem 
+
+for(let prop in rabbit){
+  if(rabbit.hasOwnProperty(prop)){        // returns only own properties
+    console.log(prop);                    // jumps 
+  }
+}
