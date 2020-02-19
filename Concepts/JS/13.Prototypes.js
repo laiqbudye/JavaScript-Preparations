@@ -40,3 +40,22 @@ Animal.prototype.run = function(){
 let horse = new Animal("Raja", 50);     // it will create an object of type animal and set its __proto__ to Animal.prototype
 horse.name;     //Raja
 horse.run();    //Running   // it gets called from prototype
+
+
+***********************************************************************************************************************************
+  
+//   e.g
+  
+  const arr = [];             // which is equivlent to const arr = new Array();
+
+arr.push("1");   // from where this push method came from?   its from Array.prototype
+
+// in the above e.g arr first look for push method in itself, if doesnt found then it go to Array.prototype which is linked to arr.__proto__
+// if still not found again it will go up like arr.__proto__.__proto__
+
+arr.__proto__.__proto__ === Array.prototype.__proto__     // true (referring to main object from which all objects, array, functions get create)
+
+arr.__proto__.__proto__.__proto__    // null, whenenver we cross base object in look up it returns NULL.
+
+arr.__proto__ === Array.prototype   // true
+
