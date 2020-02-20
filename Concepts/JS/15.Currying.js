@@ -10,10 +10,10 @@
 
 // we can achieve currying in two ways:
 
-1. using bind method
-2. Function closures
+// 1. using bind method
+// 2. Function closures
 
-1.using bind method
+// 1.using bind method
 
 var multiply = function(a,b){
     return a*b;
@@ -26,3 +26,21 @@ multiplybytwo(5);   //10
 var multiplybythree = multiply.bind(this,3);
 
 multiplybythree(5);   //15
+
+
+
+************************************************************************************************************************************
+    
+// 2.Using function closures
+    
+var multiply = function(a){
+    return function(b){
+        return a*b;
+    }
+}
+
+
+var multiplybytwo = multiply(2);
+
+multiplybytwo(10)
+
