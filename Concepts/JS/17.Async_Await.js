@@ -1,3 +1,12 @@
+// There’s a special syntax to work with promises in a more comfortable fashion, called “async/await”.
+
+// The word “async” before a function means one simple thing: a function always returns a promise. 
+// Other values are wrapped in a resolved promise automatically.
+
+// The keyword await makes JavaScript wait until that promise settles and returns its result.
+// await keyword works only inside functions that are started with async keywrd.
+// If we try to use await in non-async function, there would be a syntax error:
+
 
 // Async / Await
 async function init() {   //we need to write async keyword in front of function
