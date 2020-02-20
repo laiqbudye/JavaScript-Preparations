@@ -76,6 +76,6 @@ const promise4 = fetch('https://jsonplaceholder.typicode.com/users').then(res =>
   res.json()
 );
 
-Promise.all([promise1, promise2, promise3, promise4]).then(values =>
-  console.log(values)
+Promise.all([promise1, promise2, promise3, promise4]).then(values =>   
+  console.log(values)   //promise.all waits for all promises to get resolved, then it will get resolve
 );
