@@ -40,7 +40,7 @@ var multiply = function(a){
 }
 
 
-var multiplybytwo = multiply(2);
+var multiplybytwo = multiply(2);    // here value 2 will get assign for a, and it get closured
 
-multiplybytwo(10)
+multiplybytwo(10);      // it will multiply 10 with 2 which is a closure variable.
 
