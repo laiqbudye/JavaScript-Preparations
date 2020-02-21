@@ -79,3 +79,34 @@ const promise4 = fetch('https://jsonplaceholder.typicode.com/users').then(res =>
 Promise.all([promise1, promise2, promise3, promise4]).then(values =>   
   console.log(values)   //promise.all waits for all promises to get resolved, then it will get resolve
 );
+
+
+
+*********************************************************************************************************************************
+  example fro techsith tutorial
+  
+  let cleanRoom = function() {
+  return new Promise(function(resolve, reject) {
+    resolve('Cleaned The Room');
+  });
+};
+
+let removeGarbage = function(message) {
+  return new Promise(function(resolve, reject) {
+    resolve(message + ' remove Garbage');
+  });
+};
+
+let winIcecream = function(message) {
+  return new Promise(function(resolve, reject) {
+    resolve( message + ' won Icecream');
+  });
+};
+
+cleanRoom().then(function(result){      // this result is a value/message that we are passing from resolve method.
+	return removeGarbage(result);
+}).then(function(result){
+	return winIcecream(result);
+}).then(function(result){
+	console.log('finished ' + result);
+})
