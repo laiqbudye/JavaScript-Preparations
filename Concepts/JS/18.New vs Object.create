@@ -1,0 +1,46 @@
+//New Keayword 
+
+//new is a keyword which creates an empty object and also creates this keyword pointing to that empty object.
+// basically new operator is used to create new objects using function constructor.
+
+function Person(firstname, lastname){   // this is a constructor function
+    console.log(this);                  // here this pointing to an empty object which were created by new operator at line 17
+    this.firstname = firstname;       
+    this.lastname = lastname;           // adding properties in this object which will get added in new object
+  
+}
+
+Person.prototype.getName = function(){      // this function we can also write inside Person function,  but if we create 1000 objects from that Person constructor then 1000 times that function will get store in the memory
+    console.log('HI')
+}
+
+var Laiq = new Person('Laiq', "BUDYE");      o/p //Person {firstname: "Laiq", lastname: "BUDYE"}
+
+Person.prototype.isPrototypeOf(Laiq);     o/p true
+
+// so on the above line, when we create object with new keyword JS internally assign Person.prototype to the proto of newly created object
+
+Laiq.__proto__ === Person.prototype   // true
+
+
+
+
+
+//Object.create()
+
+var obj = {
+    a: 'laiq',
+    b: ' budye',
+    c: function(){
+        console.log(this.a + this.b);
+    }
+}
+
+var d = Object.create(obj);   o/p // {}
+
+
+Object.create creates an empty object with its proto set to the object, which is passed inside Object.create() function.
+
+d.__proto__;    // {a: "laiq", b: " budye", c: ƒ}
+
+obj.isPrototypeOf(d);  // true
