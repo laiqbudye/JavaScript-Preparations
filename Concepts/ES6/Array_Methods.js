@@ -143,3 +143,32 @@ const array1 = ['a', 'b', 'c'];
 array1.forEach(element => console.log(element));   // a b c
 
 
+//6. Array.every()
+//this method checks all the elements for a specified funcition.. if all comes true then it returns true. it returns boolean value
+
+const array1 = [1, 30, 39, 29, 10, 13];
+
+console.log(array1.every(value => value < 40));   // returns true
+console.log(array1.every(value => value < 38));   // returns false
+
+
+//7. Array.some()
+//The some() method tests whether at least one element in the array passes the test implemented by the provided function. It returns a Boolean value.
+
+const array1 = [1, 30, 39, 29, 10, 13];
+
+console.log(array1.some(value => value < 2));   // returns true
+console.log(array1.some(value => value > 38));   // returns true
+
+
+//8. Array.flat()
+// this method flattens array upto specified depth.
+
+const arr1 = [0, 1, 2, [3, 4]];
+
+console.log(arr1.flat());        // [0, 1, 2, 3, 4]
+
+const arr2 = [0, 1, 2, [[[3, 4]]]];
+
+console.log(arr2.flat(2));      //  [0, 1, 2, [3, 4]]
+console.log(arr2.flat(3));     //  [0, 1, 2, 3, 4]
