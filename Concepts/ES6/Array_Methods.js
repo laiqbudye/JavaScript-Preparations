@@ -133,3 +133,13 @@ console.log(found);  //12
 const array2 = [5, 12, 8, 130, 44];
 const found = array2.findIndex(element => element > 10);
 console.log(found);  //1
+
+
+//5. Array.forEach
+
+//this method is same as general for loop... this method does not return new array... like all the ither methods this also take one function as a param.
+
+const array1 = ['a', 'b', 'c'];
+array1.forEach(element => console.log(element));   // a b c
+
+
