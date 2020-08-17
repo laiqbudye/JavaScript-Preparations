@@ -109,3 +109,27 @@ const lastedTenYears = companies.filter(company => (company.end - company.start 
 
 //map returns the same number of elements as the original, but the element value will be transformed in some way.
 //filter returns the same or less number of elements than the original but not change the original elements values.
+
+
+
+//3. Array.find()
+
+//like above two methods this method also take one param as i/p, this method finds an array element and returns true or false.
+//find() method returns very first occurence which satisfies the condition & then stops... it does not look after that even if the same element is present in array..
+
+// in easy words, if there are two same elements in array then find method will return only first element from the array.
+
+//e.g
+const array1 = [5, 12, 8, 130, 44];
+const found = array1.find(element => element > 10);
+console.log(found);  //12
+
+
+
+//4.Array.findIndex()
+
+//if we need to find index of an element then we can use this method. this method also take one param as i/p.
+
+const array2 = [5, 12, 8, 130, 44];
+const found = array2.findIndex(element => element > 10);
+console.log(found);  //1
