@@ -3,7 +3,7 @@
 //1.Array.map()
 
 // Array.map returns a new array of elements where you have applied some function on the element
-//so that it changes the original elements of array.
+// this method does not change original array.. we can still get origianl array by its name.
 
 //use map only if you are using returned array (if not using use for-each instead) or you have to return value from callback function
 
@@ -53,6 +53,9 @@ let roots = numbers.map(function(num) {
 //2. Array.filter()
 
 //The filter() method creates a new array with all elements that pass the test implemented by the provided function.
+// filter method just return true or false based on condition....  so if true mns that item is going to store in new array.. if false then jst ignore that item.
+// this method doesnt change the original array.
+
 
 const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
 
