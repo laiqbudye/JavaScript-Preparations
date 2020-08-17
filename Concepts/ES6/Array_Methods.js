@@ -172,3 +172,21 @@ const arr2 = [0, 1, 2, [[[3, 4]]]];
 
 console.log(arr2.flat(2));      //  [0, 1, 2, [3, 4]]
 console.log(arr2.flat(3));     //  [0, 1, 2, 3, 4]
+
+
+//INTERVIEW QUESTION
+// flat nested arrays using J... without inbuilt flat method
+
+const flatten = function(arr, result = []) {
+  for (let i = 0; i < arr.length; i++) {
+    const value = arr[i];
+    if (Array.isArray(value)) {
+      flatten(value, result);
+    } else {
+      result.push(value);
+    }
+  }
+  return result;
+};
+
+flatten([0, 1, 2, [[[3, 4]]]])  // [0, 1, 2, 3, 4]
