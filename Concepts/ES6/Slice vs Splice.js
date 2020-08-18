@@ -30,3 +30,9 @@ console.log(array2);                // shows [6,7,9,0]
 var array3=[6,7,8,9,0];
 console.log(array3.splice(2,0,1,2,3));          // []
 console.log(array3);      // [6, 7, 1, 2, 3, 8, 9, 0]
+
+----------------------------------------------------------------------------------------------------
+
+var array4 = [6,7,8,9,0];
+console.log(array4.splice(3,1,11));    //[9]   // third index.. remove 1 element..... add new element 11
+console.log(array4);   // [6, 7, 8, 11, 0]
