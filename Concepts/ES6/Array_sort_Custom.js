@@ -2,6 +2,7 @@
 
 //sort method sorts the number, strings, objects.
 
+//By default, the sort() function sorts values as strings.
 //e.g
 const arr = [5,8,1,4,9,7]
 
@@ -18,7 +19,7 @@ arr.sort()
 console.log(arr);  // [18, 21, 244, 777, 85, 9]
 
 //in the above example we can see some weird o/p. this is because of sort method does sorting on the basis of first letter... (first it convert number to string, and then do sorting
-on the basis of first letter of the string)
+//on the basis of first letter of the string)
 
 // we can solve this problem by passing custom function to sort method.
 
@@ -31,12 +32,22 @@ function compare(a,b){
     return b-a;    // this is for descending result
 }
 
-
 //ES6 version of same example
 
 const arr = [85,18,21,244,9,777]
 arr.sort((a,b) => a-b)   // [9, 18, 21, 85, 244, 777]
 console.log(arr);
+
+
+
+//for compare function
+// If the result is negative a is sorted before b.
+
+// If the result is positive b is sorted before a.
+
+// If the result is 0 no changes are done with the sort order of the two values.
+
+
 
 -------------------------------------------------------------------------------------------------------------------
 
