@@ -40,3 +40,15 @@ console.log(arr);
 
 -------------------------------------------------------------------------------------------------------------------
 
+// sorting of Strings
+    
+const arr = ['red', 'blue', 'Laiq']
+arr.sort()  
+console.log(arr);  // ["Laiq", "blue", "red"]
+
+
+//for strings it sorts CAPITAL letters first then small
+
+const arr = ['red', 'blue', 'Laiq', 45, 1]
+arr.sort()  
+console.log(arr);  // [1, 45, "Laiq", "blue", "red"]
