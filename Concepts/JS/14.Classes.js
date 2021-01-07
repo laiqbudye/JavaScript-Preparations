@@ -41,7 +41,7 @@ Dog.prototype.bark = function () {			// adding Dog specific method
   this.energy -= .1
 }
 
-Dog.prototype.constructor = Dog			// due to line Dog's constructor was set to animals constructor, now we have assigned it to Dog's constructor
+Dog.prototype.constructor = Dog			// due to line 37 Dog's constructor was set to animals constructor, now we have assigned it to Dog's constructor
 
 
 const leo = new Dog('Leo', 7,"Golden")
