@@ -17,6 +17,14 @@ console.log(x);                   // [object Object]: "budye"
 // to overcome this issue MAP comes in picture.
 
 //Map allows ant type of keys, number object funcion anything
+
+
+// Difference between Map & Objects  (watch this 2 min video:- https://www.youtube.com/watch?v=nValTHkLkf8)
+  //1. type of key (map allows any type.... object allows only string)
+  //2. Iterable (map is iterable.... object is not)
+  //3. size (map.size() returns number of keys.... object not, we need to get object.Keys() which will return array then find length of that)
+   //4. JSON.Stringify()  (cant strigify map directly..... can stringify objects)
+
 // MAP
 
 var x = {};
