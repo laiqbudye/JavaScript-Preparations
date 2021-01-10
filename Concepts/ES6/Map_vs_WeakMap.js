@@ -12,8 +12,11 @@ x[y] = 'laiq';
 x[z] = 'budye';                   //here object x will store only last object key which is z and will ignore y... hence we need MAPS
 console.log(x);                   // [object Object]: "budye"
 
+
+// Objects allows keys to be string only. If we pass number or object as a key to object then it implicitly converts it into string
 // to overcome this issue MAP comes in picture.
 
+//Map allows ant type of keys, number object funcion anything
 // MAP
 
 var x = {};
