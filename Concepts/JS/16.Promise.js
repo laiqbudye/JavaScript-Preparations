@@ -1,5 +1,7 @@
 
 // Promise introduced in ES6. before promised we were using callback funtions.
+//The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+
 
 const posts = [
   { title: 'Post One', body: 'This is post one' },
