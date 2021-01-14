@@ -1,4 +1,4 @@
-//WAP which will give you each letter count in a given string.
+//WAP which will give you each letter count in a given string without using any inbuilt functions.
 // i/p - amazon
 // o/p - a 2, m 1, z 1, o 1, n 1
 
