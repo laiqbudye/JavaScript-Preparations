@@ -52,6 +52,9 @@ alert("some code");
   
   ###Execution Context
 
+// everything in js is done inside execution context.
+// whenever we start running JS code a global execution context is created, when we call a function then brand new Execution context is created for that function
+
 // whenever browser runs any JS code, it first create xecution context in which our code gets run.
 // in the execution context it creates two things
 //1. global Object (window object)
