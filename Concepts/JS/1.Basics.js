@@ -57,6 +57,10 @@ alert("some code");
 //1. global Object (window object)
 //2. this 
   
+
+//it is very important in JS, it contains two parts.
+1. memory - here is stores all the code in key: value pair. e.g. a: 10 for var a = 10;
+2. code - actual code runs
   
   ***********************************************************************************************
 // VARIABLE
