@@ -106,3 +106,20 @@ add(2)(4);
 
 
 7. 
+console.log(a);
+console.log(b);
+xyz();
+pqr();
+
+
+var a = 10;
+
+let b = 20;
+
+function xyz() {
+    console.log("printing xyz");
+}
+
+const pqr = function() {
+    console.log("printing pqr");
+}
