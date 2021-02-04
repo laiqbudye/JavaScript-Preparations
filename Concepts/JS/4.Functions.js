@@ -70,3 +70,17 @@ function print(){
   console.log(arguments);   //  {}
 }
 
+
+
+// write a program which will add numbers without using parameters.
+
+function add(){
+    let result = 0;
+
+    for(let i=0; i<arguments.length; i++){
+        result += arguments[i];
+    }
+    return result;
+}
+
+add(1,2,3,4,5,6,7,8);     // 36
