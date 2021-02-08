@@ -41,3 +41,13 @@ const c = 500;
 // for this also it will throw error. Uncaught SyntaxError: Identifier 'c' has already been declared
 
 
+const c = 500;
+var c = 600;
+// for this also it will throw error. Uncaught SyntaxError: Identifier 'c' has already been declared
+
+
+
+IMP NOTE:
+we can override only var declaration with var.
+
+we cant override variable decalred with let or const in the same scope with var
