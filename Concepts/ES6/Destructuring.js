@@ -67,3 +67,55 @@ const { twitter, facebook } = wes.links.social;
 console.log(twitter, facebook); // logs the 2 variables 
      
 //for more info:- https://wesbos.com/destructuring-objects/
+
+
+
+---------------------------------------------------------------------------------------------------------------------
+     
+//some more examples on detructuring
+     
+const user = {
+  id: 339,
+  name: 'Fred',
+  age: 42,
+  education: {
+    degree: {
+        bachelor: 'Yes'   
+    },
+    msg: "bye"
+  }
+};
+
+******* Nested destructuring
+
+// 1. get value of bachelor using destructuring
+
+var {education: {degree: {bachelor}}} = user;    // Yes
+
+
+
+
+// 2. get value of msg using destructuring
+var {education: {msg}} = user;    // bye
+
+
+// 3. get value of name 
+
+var {name} = user;   // Fred
+
+
+// 4. get value of name which will be accessible by firstName
+
+var {name: firstName} = user;  
+
+
+
+
+
+
+
+
+
+
+
+
