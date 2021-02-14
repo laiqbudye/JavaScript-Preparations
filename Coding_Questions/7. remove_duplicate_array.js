@@ -38,3 +38,28 @@ let uniqarr = [];
 
 
 unique(arr)
+
+
+
+-----------------------------------------------------------------------------------------------------------------
+  
+  //Write a program which will print duplicates from an array
+
+var arr = [1,2,3,4,3,1,2];
+
+function findDuplicates(data){
+let uniqarr = [];
+let duplicates = [];
+  
+  for (let i=0; i < data.length; i++){
+    if(uniqarr.indexOf(data[i]) >= 0){
+      duplicates.push(data[i])
+    } else{
+    uniqarr.push(data[i]);
+}
+  }
+  return duplicates;
+}
+
+
+findDuplicates(arr)    // [3,1,2]
