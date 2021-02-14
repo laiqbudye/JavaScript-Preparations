@@ -1,17 +1,17 @@
 
 function throttle(fn, delay){
-    let timer;
+    let inThrottle;
 
     return function(){
         let context = this;
         let args = arguments;
 
-        if(!timer){
+        if(!inThrottle){
             fn.apply(context, args);
-            timer = true;
+            inThrottle = true;
 
             setTimeout(function(){
-                timer = false;
+                inThrottle = false;
             }, delay)
         }
     }
