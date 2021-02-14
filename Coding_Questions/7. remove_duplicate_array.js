@@ -52,11 +52,11 @@ let uniqarr = [];
 let duplicates = [];
   
   for (let i=0; i < data.length; i++){
-    if(uniqarr.indexOf(data[i]) >= 0){
-      duplicates.push(data[i])
+    if(uniqarr.indexOf(data[i]) < 0){
+      uniqarr.push(data[i]);
     } else{
-    uniqarr.push(data[i]);
-}
+      duplicates.push(data[i])
+    }
   }
   return duplicates;
 }
