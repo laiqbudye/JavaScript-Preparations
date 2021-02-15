@@ -94,7 +94,8 @@ console.log(this);        //obj{}
 var anotherfunction = function(){
 console.log(this);        //obj{}
 }
-return anotherfunction.bind(this);   // here this refers to obj, so inside anoterfunction it will refer to obj only
+var binded =  anotherfunction.bind(this);   // here this refers to obj, so inside anoterfunction it will refer to obj only
+binded()
 } 
 }
 obj.sing();
