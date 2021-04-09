@@ -14,3 +14,41 @@
 12. Error boundary
 13. ShouldComponentUpdate performs shallow or deep comparison
 14. Shallow vs deep comparison
+
+
+
+//Globant
+Javascript
+1. data types
+2. coding questions on pass by reference (objects/arrays)
+3. coding questions on hoisting
+4. var let const declaration in same scope
+5. prototypes in deep
+6. how prototype works in classes
+7. use stict
+8. event bubbling/capturing
+9. code to find out each letter's count in a string 7 return in object
+e.g AMAZON => {A:2, M:1... }
+10. closure vala code & solve that problem
+
+ 
+
+
+React
+1. stateless vs stateful component
+2. what are hooks
+3. shouldComponentUpdate in detail
+4. shallow vs deep compare
+5. context api, why it comes in picture
+6. redux action creators vs reducers
+7. webpack overview
+
+ 
+
+
+HTML & CSS
+1. sematic tags
+2. inline vs block vs inline-block
+3. positioning
+4. css specificity
+5. less sass
