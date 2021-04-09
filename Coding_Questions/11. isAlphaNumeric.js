@@ -4,7 +4,7 @@
 '23efsf'  // true
 
 function isAlphaNumeric(str) {
-  return str.match(/((^[0-9]+[a-z]+)|(^[a-z]+[0-9]+))+[0-9a-z]+$/i) !== null
+  return str.match(/(^[0-9]+[a-z]+)|(^[a-z]+[0-9]+)+$/i) !== null
 }
 
 isAlphaNumeric('234dfds') // true
