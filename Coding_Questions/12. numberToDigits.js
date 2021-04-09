@@ -3,13 +3,14 @@
 i/p: [12, 34] => 1, 2, 3, 4
 
 function numberToDigits(numArray) {
+    let clonedArray = [...numArray]
     let result = [];
     
-    for(let i=0; i< numArray.length; i++){
+    for(let i=0; i< clonedArray.length; i++){
         let digits = [];       
-        while(numArray[i] > 0){
-            digits.unshift(numArray[i] % 10);
-            numArray[i] = parseInt(numArray[i] / 10);
+        while(clonedArray[i] > 0){
+            digits.unshift(clonedArray[i] % 10);
+            clonedArray[i] = parseInt(clonedArray[i] / 10);
         }
         result = result.concat(digits);
     }
