@@ -55,3 +55,35 @@ HTML & CSS
 4. css specificity
 5. less sass
 6. center a div horizontally & verrtically by different approaches
+
+
+
+
+
+
+/*************************************** IPROGRMMAR *****************************/
+Javscript
+1. Data types
+2. ways to copy objects
+3. shallow vs deep copy
+4. var let const difference
+5. closure & example of settimeout
+
+
+React
+1. class vs functional components
+2. state vs props
+3. class lifecycle methods with sequence & params they take
+4. how to optimize react components
+5. useeffect in detail
+6. provided a fake api link & told to print data from that api using fetch()
+7. setstate is synchronous or async
+8. which pkg required to use routing & its version
+9. latest version of react
+10. JWT (JSON Web tokens) & how to use it for authentication
+11. if i want to share a profile of user from our app to whatsapp then how to share
+12. how to protect our web app on internet
+13. in a for loop if i write promises then what will happen
+14. write a function which will return true if a string is alphanumeric or else return false
+
+then they asked to complete an assignment(image comparison utility) within 3 hrs which you can find at:- https://github.com/laiqbudye/image_compare
