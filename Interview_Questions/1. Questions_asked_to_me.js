@@ -17,7 +17,7 @@
 
 
 
-//Globant
+/************************************GLOBANT********************************/
 Javascript
 1. data types
 2. coding questions on pass by reference (objects/arrays)
@@ -30,10 +30,9 @@ Javascript
 9. code to find out each letter's count in a string 7 return in object
 e.g AMAZON => {A:2, M:1... }
 10. closure vala code & solve that problem
+11. why arrow functions got introduce? what problem they solve
 
  
-
-
 React
 1. stateless vs stateful component
 2. what are hooks
@@ -42,13 +41,17 @@ React
 5. context api, why it comes in picture
 6. redux action creators vs reducers
 7. webpack overview
+8. when to use redux & when to use context api
+9. write a counter example with state
+10. write a counter example with redux
+11. is is good approach to write redux connect method in eachn every compoenent? isn't it code repetition? how you will handle that case?
+12. class vs functional components? which one you will prefer n why?
 
  
-
-
 HTML & CSS
 1. sematic tags
 2. inline vs block vs inline-block
 3. positioning
 4. css specificity
 5. less sass
+6. center a div horizontally & verrtically by different approaches
