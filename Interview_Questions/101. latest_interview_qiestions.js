@@ -18,6 +18,7 @@ CSS
 6. box-sizing property
 7. relative vs absolute units
 8. responsive design (media queries)
+9. How to draw circle with CSS
 
 
 JAVASCRIPT
@@ -28,7 +29,7 @@ JAVASCRIPT
 5. prototypes
 6. how prototype works in classes
 7. use strict
-8. event bubbling/capturing
+8. event bubbling/capturing  (with code)
 9. code to find out each letter's count in a string & return in object
 e.g AMAZON => {A:2, M:1, Z:1, O:1, N:1}
 10. closure vala code (setTimeout example) & solve that problem
@@ -41,7 +42,7 @@ e.g AMAZON => {A:2, M:1, Z:1, O:1, N:1}
 17. Call apply bind difference
 18. how to flatten an array without using any third party library
 19. thrttling vs Debouncing (may ask to write code)
-  
+20. what is event delegation
 
 REACT
 1. stateless vs stateful component
