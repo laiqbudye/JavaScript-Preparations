@@ -1,87 +1,118 @@
 
 // Promise introduced in ES6. before promised we were using callback funtions.
 //The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+// promise has 3 states: pending(default), fulfilled, reject. 
+// once it changes its state from pending to fulfilled or reject then promise gets over. it wont run again.
 
 
-const posts = [
-  { title: 'Post One', body: 'This is post one' },
-  { title: 'Post Two', body: 'This is post two' }
-];
+// Prior to promises we have callbacks to perform some async operations.
 
-function getPosts() {
-  setTimeout(() => {
-    let output = '';
-    posts.forEach((post, index) => {
-      output += `<li>${post.title}</li>`;   //printing post's title
-    });
-    document.body.innerHTML = output;
-  }, 1000);
+e.g
+// write 3 functions, where 2nd function depends on result from 1st function & 3rd function depends on result from 2nd function
+
+function first(value, callback){
+    callback(value + 2, false)
 }
 
-function createPost(post, callback) {
-  setTimeout(() => {
-    posts.push(post);
-    callback();         //getposts() will get execute here 
-  }, 2000);
+function second(value, callback){
+    callback(value + 2, false)
 }
 
-createPost({ title: 'Post Three', body: 'This is post three' }, getPosts);    // here we passed getPosts as callback function 
+function third(value, callback){
+    callback(value + 2, false)
+}
 
+first(2, function(firstResult, err){
+    if(!err){
+        second(firstResult, function(secondResult, err){
+            if(!err){
+                third(secondResult, function(thirdResult, err){
+                    if(!err){
+                        console.log("Third Result:- ", thirdResult);   // 8
+                    }
+                })
+            }
+        })
+    }
+})
+
+
+// as we can see in the above code, we have passed "2" & a callback to function first & then passing the result to second function, same thing happening for function third.
+// so when our functions got incresed, this code will be very difficult to manage. this also known as "CALLBACK HELL / PYRAMID OF DOOM".
 
 *********************************************************************************************************************************
   
-//   to overcome this issue promises comes into picture.
+//   to overcome this issue promises comes into picture which transforms same code in minimal lines
   
-  const posts = [
-  { title: 'Post One', body: 'This is post one' },
-  { title: 'Post Two', body: 'This is post two' }
-];
+let promise = new Promise((resolve, reject) => {
+    resolve(2)
+})
 
-function getPosts() {
-  setTimeout(() => {
-    let output = '';
-    posts.forEach((post, index) => {
-      output += `<li>${post.title}</li>`;
-    });
-    document.body.innerHTML = output;
-  }, 1000);
+promise.then(first).then(second).then(third).then(res => console.log(res))
+.catch(err => {
+    console.log(err);
+})
+
+function first(value){
+    return value + 2
 }
 
-function createPost(post) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      posts.push(post);
-
-      const error = false;
-
-      if (!error) {
-        resolve();
-      } else {
-        reject('Error: Something went wrong');
-      }
-    }, 2000);
-  });
+function second(value){
+    return value + 2
 }
 
-createPost({ title: 'Post Three', body: 'This is post three' })
-  .then(getPosts)       // if it gets resolved then this line will get execute
-  .catch(err => console.log(err));    // if some error occurs this will catch that errror
+function third(value){
+    return value + 2
+}
+
+// at line 51, we have passed function names inside .then block, which executes those function with previous calculated value
+// e.g .then(first), here it will execute function first with value as 2 (which is resolved on line 48) & so on
+
+********************************************************************************************************************************
+
+Promise Basics
+
+First:- 
+let promise = new Promise((resolve, reject) => {
+    resolve("I got resolved")
+})
+
+promise.then((res)=> {                 // .then method takes 2 cb functions as arguments, 1st cb gets execute when promise resolves, 2nd cb gets execute promise fails
+    console.log(res)    // I got resolved
+},
+(err) => {
+    console.log(err)   // Some error
+})
 
 
-Promise.all
-const promise1 = Promise.resolve('Hello World');
-const promise2 = 10;
-const promise3 = new Promise((resolve, reject) =>
-  setTimeout(resolve, 2000, 'Goodbye')
-);
-const promise4 = fetch('https://jsonplaceholder.typicode.com/users').then(res =>
-  res.json()
-);
 
-Promise.all([promise1, promise2, promise3, promise4]).then(values =>   
-  console.log(values)   //promise.all waits for all promises to get resolved, then it will get resolve
-);
+Second:- 
+let promise = new Promise((resolve, reject) => {
+    reject("Some error")
+})
 
+promise.then((res)=> {
+    console.log(res)
+},
+(err) => {
+    console.log(err)   // Some error
+})
+
+
+
+Third:-  we can use .catch block which will get execute when promise fails
+
+let promise = new Promise((resolve, reject) => {
+    reject("Some error")
+})
+
+promise.then(res => {
+    console.log(res)
+}).catch(err => {
+    console.log(err);   // Some error
+}).finally(() => {
+    console.log("from final")      // this block will get execute in every scenario i.e promise resolves or rejected
+})
 
 
 *********************************************************************************************************************************
