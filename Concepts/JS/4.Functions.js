@@ -84,3 +84,48 @@ function add(){
 }
 
 add(1,2,3,4,5,6,7,8);     // 36
+
+
+
+Pure Functions:-
+  - Pure Functions are functions that return same output every single time when we pass same inputs.
+  - they dont include any side effects
+  - they should not change any value outside the function
+    e.g
+    //impure function
+    const array = [1,2,3,4];
+
+    function addElementToArray(element){
+        array.push(element)    // here we are pushing value in global array ie. changing global array from inside function.. so this is impure function
+    }
+
+    addElementToArray(5);
+    console.log(array);   // [1,2,3,4,5]  
+    
+
+    // impure function
+    const array = [1,2,3,4];
+
+    function addElementToArray(a, element){
+        a.push(element)   // here again we are changing input value.. so this is impure function
+    }
+
+    addElementToArray(array, 5);
+    console.log(array);  // [1,2,3,4,5]  
+
+
+    //Pure function
+    const array = [1,2,3,4];
+
+    function addElementToArray(a, element){
+        return [...a, element];    // here we are not changing any value in global scope nor changing any input value
+    }
+
+    let newArr = addElementToArray(array, 5);
+    console.log(newArr);  // [1,2,3,4,5]  
+    console.log(array);   // [1,2,3,4]  
+
+    console.log(newArr);  // [1,2,3,4,5]   
+    console.log(array);   // [1,2,3,4] 
+
+// so we can see in the above example, it is returning same output each time when passed same inputs. also it is not changing any value i.e this is PURE function.
