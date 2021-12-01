@@ -1,4 +1,4 @@
-callback:-
+1. callback:-
     is a function which is passed as an argument to other function.
     there are two types of callback functions:- 
         1. synchronous
@@ -49,3 +49,38 @@ callback:-
             to overcome this problem Promise comes into picture.
               
               
+2. Promise
+     is an object which represents eventual completion or failure of an asynchronous tasks with its resulting value or a reason for failure.
+     It has 3 states:  Pending (by default), Fullfilled, Rejected 
+     
+     e.g
+        //order processing workflow using promise
+        getUserInfo()
+            .then(() => getProductQuantity())
+            .then(() => processPayment())
+            .then(() => placeOrder())
+            .then(() => {
+                // show order placed notification
+            })
+            .catch(() => handleError())
+
+            this is simple to understand as compare to callback.
+            
+        
+  3. async await
+        it is a syntactic sugar over promises. behind the scenes it uses promises only.
+        
+        e.g
+           //order processing workflow using async await
+           const processOrder = async () => {
+            try {
+                await getUserInfo()
+                await getProductQuantity()
+                await processPayment()
+                await placeOrder()    
+            } catch (error) {
+                // handle error
+            }
+        }
+
+
