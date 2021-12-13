@@ -7,7 +7,7 @@ for(var i = 0; i<arr.length; i++) {
     }, 2000)
 }
 
-
+------------------------------------------------------
 
 2. 
 const person = [ 
@@ -25,7 +25,7 @@ function avgSal(data){
 };  // write code to find average salary
 
 
-
+------------------------------------------------------
 
 3. 
 function foo(){
@@ -60,7 +60,7 @@ foo
 foo
 
 
-
+------------------------------------------------------
 
 4.
 function printName(name){
@@ -71,7 +71,7 @@ function printName(name){
 
 printName("abc")("pqr")
 
-
+------------------------------------------------------
 
 5. 
 var a = 10;
@@ -85,6 +85,7 @@ function print() {
 
 print()();
 
+------------------------------------------------------
 
 6. 
 
@@ -94,8 +95,8 @@ function add(a,b){
 
 add(1,3);     // convert this function to add(a)(b);
 
-O/P
 
+O/P
 function add(a) {
     return function(b) {
         return a + b;
@@ -104,6 +105,7 @@ function add(a) {
 
 add(2)(4);
 
+------------------------------------------------------
 
 7. 
 console.log(a);
@@ -123,3 +125,52 @@ function xyz() {
 const pqr = function() {
     console.log("printing pqr");
 }
+
+------------------------------------------------------
+
+8. 
+var num = 10;
+
+function printNum(){
+    num = 20;
+    return function(){
+        var num;
+        console.log(num);
+    }
+}
+
+printNum()();
+console.log(num);
+
+------------------------------------------------------
+
+9. 
+var a = 10;
+
+(function(){
+   a = 20;
+})()
+
+console.log(a);
+
+------------------------------------------------------
+
+10.
+console.log("start")
+
+setTimeout(function(){
+   console.log('first') 
+},0)
+
+let p = new Promise((resolve, reject) => {
+    resolve('second')
+})
+
+
+setTimeout(function(){
+   console.log('third') 
+},2000)
+
+console.log("end")
+
+p.then(res => console.log(res))
