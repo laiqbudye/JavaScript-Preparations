@@ -126,5 +126,8 @@ CODE SNIPPETS
 8. WAP which will hit given API & show result on screen
 9. WAP which will show given array of object on screen in table format. also it should be deleted once click on delete btn
 10. WAP which will print index values as a, b, c, d, e instead of 0,1,2,3,4
+11. WAP which will return Number into separate digits.
+// i/p: [12, 34]
+// o/p: [1, 2, 3, 4]
 
 guess output quesions:- https://github.com/laiqbudye/JavaScript-Preparations/blob/master/Interview_Questions/guess_output.js
