@@ -7,6 +7,9 @@ HTML
 5. what is DOCTYPE?
 6. mention new tags in HTML5
 7. in Html file, if footer is placed on top & header is at bottom then how it will render on webpage.
+8. what is size for localstorage & sessionstorage
+9. how to load JS file after html parsing completes without usibng async or defer. (ans:- using domContentLoaded event)
+10. difference between section & div
 
 
 CSS
@@ -19,6 +22,17 @@ CSS
 7. relative vs absolute units
 8. responsive design (media queries)
 9. How to draw circle with CSS
+10. what is felxbox & purpose of it.
+11. how to place 4 divs in one line with 100% height with equal space around them.
+12. what is purpose of em.
+13. how to place image inside a div with equal padding from all sides.
+14. I have one parent div to which I have applied opacity as 0.5, but i want child elements to not apply that opacity then how to achieve that.
+15. how to wrap text in one line
+16. pseudo elements vs pseudo classes
+17. DOM vs Virtual DOM
+18. how to declare a css variable
+19. how to manipulate values of vh & vw. ie. 1vh = 50% of viewport height (how to do this)
+20. draw a plus sign using css using only one div
 
 
 JAVASCRIPT
@@ -41,8 +55,15 @@ e.g AMAZON => {A:2, M:1, Z:1, O:1, N:1}
 16. What is event loop (microtasks, macrotasks) 
 17. Call apply bind difference
 18. how to flatten an array without using any third party library
-19. thrttling vs Debouncing (may ask to write code)
+19. thrttling vs Debouncing. any real life example (may ask to write code)
 20. what is event delegation
+21. how THIS keyword acts differently in normal vs arrow functions.
+22. when we create an obj using new keyword then what happens behind the scenes in terms of prototypes.
+23. how to add a custom method on prototype & what is the advantages of that.
+24. what are pure functions. any example of pure function.
+25. does JS multithreaded? does it synchrnous? how it performs async tasks
+26. how shallow comparison works on nested objects
+
 
 REACT
 1. stateless vs stateful component
@@ -69,8 +90,11 @@ REACT
 22. tell any real time scenario where we can use getSnapShotBeforeUpdate()
 23. Error Boundary usage
 24. how to achieve lazy loading in react
-
-
+25. what are rules for react hooks
+26. why it is necessary to initialiaze hook on first line. can we initialize it inside if statment. if no, why
+27. how react.memo compared nested objects using shallow comparison. what will happen if nested obj has been changed.
+28. what is the use of react.memo's callback function
+29. what is HOC & render props.
 
 
 REDUX
@@ -80,6 +104,9 @@ REDUX
 4. explain how redux works with an example. 
 5. is it a good approach to write redux connect method in each & every compoenent? isn't it code repetition? how you will handle that case?
 6. mapStateToProps vs mapDispatchToProps 
+7. what is middleware
+8. redux thunk usage
+9. redux thunk vs saga
 
 
 OTHERS
@@ -96,5 +123,8 @@ CODE SNIPPETS
 5. WAP to flatten array
 6. WAP which will sort array of objects based on salary.
 7. WAP to detect palindrome
-8. WAP which will go to given API & show result on screen
+8. WAP which will hit given API & show result on screen
 9. WAP which will show given array of object on screen in table format. also it should be deleted once click on delete btn
+10. WAP which will print index values as a, b, c, d, e instead of 0,1,2,3,4
+
+guess output quesions:- https://github.com/laiqbudye/JavaScript-Preparations/blob/master/Interview_Questions/guess_output.js
