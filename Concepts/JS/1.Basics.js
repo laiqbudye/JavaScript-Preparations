@@ -43,9 +43,10 @@ alert("some code");
 -------------------------------------------------
 //by using this it will require
 //1. Function parameter names must be unique (function sum (x, x) {...})
-//2.Requires all property names in an object literal to be unique (var x = {x1: "1", x1: "2"})
-//3.Attempts to delete undeletable properties will throw (delete Object.prototype)
-
+//2. Requires all property names in an object literal to be unique (var x = {x1: "1", x1: "2"})
+//3. Attempts to delete undeletable properties will throw (delete Object.prototype)
+//4. prevents to accodental declaration of variables  e.g shouldShowPrompt = false;    // this will throw an error as there is no let, var or const.
+ 
 //for more visit:- https://stackoverflow.com/questions/1335851/what-does-use-strict-do-in-javascript-and-what-is-the-reasoning-behind-it
 
   **********************************************************************************************
