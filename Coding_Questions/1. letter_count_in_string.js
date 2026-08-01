@@ -7,7 +7,7 @@ function countLetters(data) {
   var obj = {};
   for (let i = 0; i < data.length; i++) {
     if (obj[data.charAt(i)]) {
-      obj[data.charAt(i)] = obj[data.charAt(i)] + 1;
+      obj[data.charAt(i)] = obj[data.charAt(i)] + 1;      // OR:-  obj[data.charAt(i)] += 1;
     } else {
       obj[data.charAt(i)] = 1;
     }
