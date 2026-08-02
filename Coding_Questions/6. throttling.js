@@ -2,12 +2,10 @@
 function throttle(fn, delay){
     let inThrottle;
 
-    return function(){
-        let context = this;
-        let args = arguments;
+    return function(...args){
 
         if(!inThrottle){
-            fn.apply(context, args);
+            fn.apply(this, args);
             inThrottle = true;
 
             setTimeout(function(){
